@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+}
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+  padding: 0;
+}
+.container{
+  border: 1px solid;
+  width: 10%;
+  height: 10%;
+}
+
+.wrapper{
+  display:flex;
+  
+  flex-wrap: wrap;
+}
