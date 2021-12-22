@@ -6,8 +6,6 @@ let i=1;
 
 function Home() {
   
-
-
   return (
     <>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
@@ -18,18 +16,14 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <p>Notes</p>
-      </header>
-
 
       <main>
-        <button onClick={addDiv}>add</button>
+        <button className={styles.button} onClick={addDiv}>add</button>
 
         <div className="css0">
           <div className="wrapper" id="wrapper">
             <div class="container" id="container-0" onClick={openModal}>
-              <p id="title-0">Welcome-0</p>
+              <p id="title-0">Title</p>
             </div>
           </div>
         </div>
@@ -41,7 +35,7 @@ function Home() {
           <span class="close">&times;</span>
           <h5>Enter title:</h5>
           <input type="text" id="modalTitleVal" defaultValue="enter text:"></input>
-
+          <textarea id="modalContent" rows="5" cols="100"></textarea>
           <button type="button" id="0" onClick={setTitle}>Save Changes</button>
 
         </div>
@@ -60,7 +54,7 @@ const setTitle = (event) => {
 
 //Opens the modal when a container is clicked
 const openModal = (event) => {
-  let id=event.target.id.substring(event.target.id.length-1);
+  let id=event.target.id.slice(-1);
   
   // Get the modal
   var modal = document.getElementById("myModal");
@@ -98,8 +92,8 @@ function addDiv(){
   newDiv.onclick  =openModal;
 
   //Adding p tag into the newly create div element
-  let newP = document.createElement("p");
-  newP.innerHTML="Welcome-"+i;
+  var newP = document.createElement("p");
+  newP.innerHTML="Title";
   newP.id="title-"+i;
   newDiv.append(newP);
   

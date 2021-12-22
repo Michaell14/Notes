@@ -1,8 +1,7 @@
-.header{
-    margin: 1vh 0;
 
-}
 .footer{
     position: absolute;
-    bottom: 0;
+    bottom: 1vh;
+    width: 100%;
+    text-align: center;
 }
