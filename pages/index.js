@@ -6,14 +6,6 @@ let i=1;
 
 function Home() {
   
-  /*function divclick(){
-    modal.style.display="block";
-  }*/
-
-  useEffect(() =>{
-    
-    
-  })
 
 
   return (
@@ -48,7 +40,7 @@ function Home() {
         <div class="modal-content">
           <span class="close">&times;</span>
           <h5>Enter title:</h5>
-          <input type="text" id="modalTitleVal" name="title"/>
+          <input type="text" id="modalTitleVal" defaultValue="enter text:"></input>
 
           <button type="button" id="0" onClick={setTitle}>Save Changes</button>
 
@@ -61,22 +53,24 @@ function Home() {
 //Setting the values of the container with the values in the modal
 const setTitle = (event) => {
   let id=event.target.id;
-  //alert(id);
 
   let title= document.getElementById("modalTitleVal").value;
-  document.getElementById("container-"+id).innerHTML=title;
+  document.getElementById("title-"+id).innerHTML=title;
 }
 
+//Opens the modal when a container is clicked
 const openModal = (event) => {
   let id=event.target.id.substring(event.target.id.length-1);
   
   // Get the modal
   var modal = document.getElementById("myModal");
   modal.querySelector("button").id=id;
+  
+  document.getElementById("modalTitleVal").value=document.getElementById("title-"+id).innerHTML;
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-
+  
   // When the user clicks the button, open the modal
   modal.style.display="block";
   
