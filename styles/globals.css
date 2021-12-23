@@ -7,7 +7,9 @@
 
 html{
   height: 100%;
-  background-color: #D8E2DC;
+  /*background-color: #D8E2DC;
+*/
+  background-color: #F6E7CB;
 }
 
 main{
@@ -23,7 +25,8 @@ main{
   height: 20vh;
   padding: 1vh 2vw 0 2vw;
   margin: 2vh 2vw;
-  background-color: #fff199;
+  /*background-color: #fff199;*/
+  background-color: #A6C48A;
   border-radius: 15px;
 }
 
@@ -49,7 +52,7 @@ main{
 
 /*MODAL*/
 .modal {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
@@ -58,18 +61,28 @@ main{
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #F6E7CB;
   border-radius: 20px;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+}
+
+textarea, input{
+  background-color: #F6E4CF;
+}
+
+.inputs{
+  margin-top: 4vh;
+  display:flex;
+  flex-direction: column;
 }
 
 /* The Close Button */
@@ -85,4 +98,20 @@ main{
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+textarea{
+  border-radius: 5px;
+  box-shadow: .5px .5px .5px #999;
+  resize: none;
+}
+
+input{
+  border-radius: 4px;
+  border: 1.2px solid;
+  box-shadow: .2px .2px .2px #999;
+}
+
+#add{
+  font-size: 18px;
 }

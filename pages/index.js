@@ -18,7 +18,7 @@ function Home() {
 
 
       <main>
-        <button className={styles.button} onClick={addDiv}>add</button>
+        <button className={styles.button1} id="add" onClick={addDiv}>add</button>
 
         <div className="css0">
           <div className="wrapper" id="wrapper">
@@ -30,15 +30,19 @@ function Home() {
         </div>
       </main>
 
-      <div id="myModal" class="modal">
+      <div id="myModal" className="modal">
 
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h5>Enter title:</h5>
-          <input type="text" id="modalTitleVal" defaultValue="enter text:"></input>
-          <textarea id="modalContent" rows="5" cols="100" defaultValue="Ideas"></textarea>
+        <div className="modal-content">
+          <span className="close">&times;</span>
+          <div className="inputs">
 
-          <button type="button" id="0" onClick={changeVals}>Save Changes</button>
+            <h3 className={styles.modalInfo}>Enter title:</h3>
+            <input type="text" className={styles.modalInfo} id="modalTitleVal" defaultValue="enter text:"></input>
+            <h3 className={styles.modalInfo}>Whats your idea?</h3>
+            <textarea className={styles.modalInfo} id="modalContent" rows="13" cols="100" defaultValue="Ideas"></textarea>
+
+            <button type="button" id="0" className={styles.button} onClick={changeVals}>Save Changes</button>
+          </div>
         </div>
 
       </div>
@@ -52,6 +56,7 @@ const changeVals = (event) => {
   let title= document.getElementById("modalTitleVal").value;
   let content=document.getElementById("modalContent").value;
 
+  //Sets the content of outside values
   document.getElementById("title-"+id).innerHTML=title;
   document.getElementById("content-"+id).innerHTML = content;
 }
@@ -64,6 +69,7 @@ const openModal = (event) => {
   var modal = document.getElementById("myModal");
   modal.querySelector("button").id=id;
   
+  //Sets the inner content of the modal
   document.getElementById("modalTitleVal").value=document.getElementById("title-"+id).innerHTML;
   document.getElementById("modalContent").value=document.getElementById("content-"+id).innerHTML;
 
@@ -86,6 +92,7 @@ const openModal = (event) => {
   }
 }
 
+//Creates a new div
 function addDiv(){
   
   let grid=document.getElementById('wrapper');
