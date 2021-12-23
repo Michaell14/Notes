@@ -23,3 +23,8 @@
 .button1{
   background-color: #C3B299;
 }
+
+
+.delete{
+  cursor: pointer;
+}
