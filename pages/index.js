@@ -20,7 +20,7 @@ function Home() {
       <main>
         <button className={styles.button1} id="add" onClick={addDiv}>add</button>
 
-        <div className="css0">
+        <div>
           <div className="wrapper" id="wrapper">
             <div className="container" id="container-0" onClick={openModal}>
               
@@ -34,9 +34,8 @@ function Home() {
         </div>
       </main>
 
-      <div id="myModal" className="modal">
-
-        <div className="modal-content">
+      <div id="myModal" className={styles.modal}>
+        <div className={styles.modalContent}>
           <span className="close">&times;</span>
           <div className="inputs">
 
