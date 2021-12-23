@@ -23,7 +23,8 @@ function Home() {
         <div className="css0">
           <div className="wrapper" id="wrapper">
             <div class="container" id="container-0" onClick={openModal}>
-              <p id="title-0">Title</p>
+              <h3 id="title-0">Title</h3>
+              <p id="content-0">Ideas</p>
             </div>
           </div>
         </div>
@@ -35,9 +36,9 @@ function Home() {
           <span class="close">&times;</span>
           <h5>Enter title:</h5>
           <input type="text" id="modalTitleVal" defaultValue="enter text:"></input>
-          <textarea id="modalContent" rows="5" cols="100"></textarea>
-          <button type="button" id="0" onClick={setTitle}>Save Changes</button>
+          <textarea id="modalContent" rows="5" cols="100" defaultValue="Ideas"></textarea>
 
+          <button type="button" id="0" onClick={changeVals}>Save Changes</button>
         </div>
 
       </div>
@@ -45,11 +46,14 @@ function Home() {
   )
 }
 //Setting the values of the container with the values in the modal
-const setTitle = (event) => {
+const changeVals = (event) => {
   let id=event.target.id;
 
   let title= document.getElementById("modalTitleVal").value;
+  let content=document.getElementById("modalContent").value;
+
   document.getElementById("title-"+id).innerHTML=title;
+  document.getElementById("content-"+id).innerHTML = content;
 }
 
 //Opens the modal when a container is clicked
@@ -61,6 +65,7 @@ const openModal = (event) => {
   modal.querySelector("button").id=id;
   
   document.getElementById("modalTitleVal").value=document.getElementById("title-"+id).innerHTML;
+  document.getElementById("modalContent").value=document.getElementById("content-"+id).innerHTML;
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
@@ -91,10 +96,16 @@ function addDiv(){
   newDiv.id="container-" + i;
   newDiv.onclick  =openModal;
 
-  //Adding p tag into the newly create div element
+  //Adding h3 title tag into the newly created div element
+  var newH3 = document.createElement("h3");
+  newH3.innerHTML="Title";
+  newH3.id="title-"+i;
+  newDiv.append(newH3);
+
+  //Adding p tag into the newly created div element
   var newP = document.createElement("p");
-  newP.innerHTML="Title";
-  newP.id="title-"+i;
+  newP.innerHTML = "Ideas";
+  newP.id = "content-"+i;
   newDiv.append(newP);
   
   //grid.innerHTML += template;

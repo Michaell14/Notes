@@ -1,4 +1,3 @@
-import Footer from "./footer"
 import Header from "./header"
 
 export default function main({children}){
@@ -6,7 +5,6 @@ export default function main({children}){
         <>
             <Header/>
             <main>{children}</main>
-            <Footer/>
         </>
     )
 }
