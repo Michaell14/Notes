@@ -7,14 +7,11 @@
 
 html{
   height: 100%;
-  /*background-color: #D8E2DC;
-*/
   background-color: #F6E7CB;
 }
 
 main{
   position: relative;
-  
   height: 100%;
   padding: 0;
 }

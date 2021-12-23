@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import React, {useEffect} from "react";
 
 let i=1;
 
@@ -8,7 +7,6 @@ function Home() {
   
   return (
     <>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
       <Head>
         <title>Notes</title>
@@ -22,7 +20,7 @@ function Home() {
 
         <div className="css0">
           <div className="wrapper" id="wrapper">
-            <div class="container" id="container-0" onClick={openModal}>
+            <div className="container" id="container-0" onClick={openModal}>
               <h3 id="title-0">Title</h3>
               <p id="content-0">Ideas</p>
             </div>
