@@ -5,7 +5,7 @@ function Header(){
         <>
             <header className={styles.header}>
                 <h1 className={styles.title}>Notes</h1>
-                <h4 className={styles.name}>Michael Li</h4>
+                <h4 className={styles.name}>M.L</h4>
             </header>
         
         </>
